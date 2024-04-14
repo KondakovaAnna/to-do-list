@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.text.InputType" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".MainActivity">
+
+        <View
+            android:id="@+id/top_bar"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:background="@color/blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:background="@color/transparent"
+            android:scaleX="1.6"
+            android:scaleY="1.6"
+            android:src="?attr/actionModeCloseDrawable"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="@id/top_bar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/top_bar"
+            app:layout_constraintVertical_bias="0.5"
+            app:tint="@color/white"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
+
+        <!--        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text="Item title"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_title_icon"
+            app:layout_constraintTop_toBottomOf="@id/top_bar"
+            app:layout_constraintVertical_bias="0.048" />-->
+
+        <ImageButton
+            android:id="@+id/item_title_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:src="@android:drawable/btn_star"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top_bar"
+            app:layout_constraintVertical_bias="0.06"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:inputType="none"
+            android:autofillHints=""
+            android:ems="8"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="top|start"
+            android:text=""
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_title_icon"
+            app:layout_constraintTop_toBottomOf="@id/top_bar"
+            app:layout_constraintVertical_bias="0.045"
+            tools:ignore="Deprecated,LabelFor,SpeakableTextPresentCheck" />
+
+        <ImageButton
+            android:id="@+id/item_date_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:src="@android:drawable/ic_menu_month"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_title"
+            app:layout_constraintVertical_bias="0.035"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_title_icon"
+            app:layout_constraintTop_toBottomOf="@id/item_title"
+            app:layout_constraintVertical_bias="0.038" />
+
+        <ImageButton
+            android:id="@+id/item_time_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_date"
+            app:layout_constraintVertical_bias="0.059"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_time_icon"
+            app:layout_constraintTop_toBottomOf="@id/item_date"
+            app:layout_constraintVertical_bias="0.061" />
+
+        <ImageButton
+            android:id="@+id/item_details_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:background="@color/transparent"
+            android:clickable="false"
+            android:src="@android:drawable/ic_menu_info_details"
+            android:tintMode="multiply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_time"
+            app:layout_constraintVertical_bias="0.09"
+            app:tint="@color/black"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        <EditText
+            android:id="@+id/item_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:editable="false"
+            android:ems="12"
+            android:inputType="none"
+            android:autofillHints=""
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:gravity="top|start"
+            android:text=""
+            android:textColor="@color/black"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/item_details_icon"
+            app:layout_constraintTop_toBottomOf="@id/item_time"
+            app:layout_constraintVertical_bias="0.077"
+            tools:ignore="Deprecated,LabelFor,SpeakableTextPresentCheck" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
