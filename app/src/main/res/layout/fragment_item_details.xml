@@ -39,19 +39,6 @@
             app:tint="@color/white"
             tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck,TouchTargetSizeCheck" />
 
-        <!--        <TextView
-            android:id="@+id/item_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:text="Item title"
-            android:textColor="@color/black"
-            android:textSize="28sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_title_icon"
-            app:layout_constraintTop_toBottomOf="@id/top_bar"
-            app:layout_constraintVertical_bias="0.048" />-->
-
         <ImageButton
             android:id="@+id/item_title_icon"
             android:layout_width="wrap_content"
@@ -150,45 +137,6 @@
             app:layout_constraintTop_toBottomOf="@id/item_date"
             app:layout_constraintVertical_bias="0.061" />
 
-        <ImageButton
-            android:id="@+id/item_details_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:background="@color/transparent"
-            android:clickable="false"
-            android:src="@android:drawable/ic_menu_info_details"
-            android:tintMode="multiply"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_time"
-            app:layout_constraintVertical_bias="0.09"
-            app:tint="@color/black"
-            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
-
-        <EditText
-            android:id="@+id/item_details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:clickable="false"
-            android:cursorVisible="false"
-            android:editable="false"
-            android:ems="12"
-            android:inputType="none"
-            android:autofillHints=""
-            android:focusable="false"
-            android:focusableInTouchMode="false"
-            android:gravity="top|start"
-            android:text=""
-            android:textColor="@color/black"
-            android:textIsSelectable="false"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/item_details_icon"
-            app:layout_constraintTop_toBottomOf="@id/item_time"
-            app:layout_constraintVertical_bias="0.077"
-            tools:ignore="Deprecated,LabelFor,SpeakableTextPresentCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

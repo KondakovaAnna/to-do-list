@@ -59,6 +59,13 @@ class CustomAdapter(private val dataSet: MutableList<ItemInfo>) :
                 dataSet.removeAt(this.adapterPosition)
                 notifyItemRemoved(this.adapterPosition)
             }
+            itemView.setOnClickListener {
+                val args = Bundle()
+                args.putString(ARG_TITLE, item.title)
+                args.putString(ARG_DATE, item.date)
+                args.putString(ARG_TIME, item.time)
+                it.findNavController().navigate(R.id.action_itemsList_to_itemDetails, args)
+            }
         }
     }
 

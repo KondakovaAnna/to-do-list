@@ -9,6 +9,9 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
 import androidx.navigation.findNavController
+import java.time.LocalDate
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 
 class NewItem : Fragment() {
@@ -29,7 +32,9 @@ class NewItem : Fragment() {
 
         view.findViewById<Button>(R.id.submit_button).setOnClickListener {
             val new_title = view.findViewById<EditText>(R.id.item_title)
-            com.example.todo_list.customAdapter.AddNewItem(ItemInfo(new_title.text.toString()))
+            val date_formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+            val time_formatter = DateTimeFormatter.ofPattern("HH:mm")
+            com.example.todo_list.customAdapter.AddNewItem(ItemInfo(new_title.text.toString(), LocalDate.now().format(date_formatter).toString(), LocalDateTime.now().format(time_formatter).toString()))
             it.findNavController().navigate(R.id.action_newItem_to_itemsList)
         }
     }

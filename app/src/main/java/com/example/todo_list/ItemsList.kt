@@ -11,22 +11,22 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todo_list.databinding.FragmentItemsListBinding
 
-data class ItemInfo(var title: String)
+data class ItemInfo(var title: String, var date: String, var time: String)
 private var dataset = mutableListOf(
     ItemInfo(
-        "Wash the dishes"
+        "Wash the dishes", "11.02.2023", "18:03"
     ),
     ItemInfo(
-        "Clone this repo"
+        "Clone this repo", "03.10.2023", "00:07"
     ),
     ItemInfo(
-        "cd to the folder"
+        "cd to the folder", "27.12.2023", "10:00"
     ),
     ItemInfo(
-        "npm install"
+        "npm install", "28.02.2024", "12:30"
     ),
     ItemInfo(
-        "npm run dev"
+        "npm run dev", "01.03.2024", "09:15"
     )
 )
 var customAdapter = CustomAdapter(dataset)
